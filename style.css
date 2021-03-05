@@ -1,0 +1,383 @@
+:root{
+	--background: hsl(180, 52%, 96%);
+	--filter_tablets: hsl(180, 31%, 95%);
+	--cyan: hsl(180, 8%, 52%);
+	--dark_cyan: hsl(180, 14%, 20%);
+	--desaturated_cyan: hsl(180, 29%, 50%);
+}
+
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	font-size:15px;
+	font-family: 'Spartan', sans-serif;
+}
+
+
+body{
+	background-color:var(--background);
+}
+
+header{
+	height:12vw;
+	background-color:var(--desaturated_cyan);
+	background-image:url("images/bg-header-desktop.svg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+#filter_list{
+	width:80%;
+	min-width:1000px;
+	background-color:white;
+	box-shadow:2px 4px 6px 1px rgba(50,50,250,0.1);
+	margin:auto;
+	border-radius:10px;
+	position:relative;
+	bottom:30px;
+	display:flex;
+	align-items:center;
+	visibility:hidden;
+}
+
+#first{
+	width:90%;
+	padding:10px 0px;
+	padding-left:30px;
+	display:flex;
+}
+
+#second{
+	text-decoration:underline;
+	color:var(--desaturated_cyan);
+	font-size:13px;
+	font-weight:700;
+	cursor:pointer;
+	padding:20px 0px;
+}
+
+.filter{
+	margin-right:15px;
+}
+
+.filter .lang{
+	margin:0;
+}
+
+.x{
+	background-color:var(--desaturated_cyan);
+	font-size:12px;
+	padding:7px;
+	font-weight:700;
+	color:white;
+	border-radius:0 3px 3px 0;
+	
+}
+
+.x:hover{
+	cursor:pointer;
+	background-color:var(--dark_cyan);
+}
+
+
+
+.border_left{
+	height:100%;
+	width:1vw;
+	border-radius:10px 0px 0px 10px;
+}
+
+.flex_container:nth-of-type(4) .border_left, .flex_container:nth-of-type(3) .border_left{
+	background-color:var(--desaturated_cyan);
+}
+
+.border_left_2{
+	background-color:white;
+	height:100%;
+	width:1vw;
+	position:relative;
+	left:-0.5vw;
+	margin-right:2%;
+}
+
+.surround{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:flex-start;
+	width:80%;
+	height:100%;
+}
+
+.flex_container{
+	display:flex;
+	background-color:white;
+	flex-direction:row;
+	align-items:center;
+	justify-content:flex-start;
+	margin:auto;
+	margin-bottom:20px;
+	height:10vw;
+	width:80%;
+	border-radius:10px;
+	box-shadow:2px 4px 6px 1px rgba(50,50,250,0.1);
+	min-width:1000px;
+	min-height:120px;
+	max-height:160px;
+	max-width:1600px;
+}
+
+
+
+.logo{
+
+}
+
+.main_container{
+	width:50%;
+	margin-left:3%;
+	height:65%;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+}
+
+.first_row{
+	display:flex;
+	align-content:center;
+	align-items:center;
+}
+
+.company{
+	color:var(--desaturated_cyan);
+	font-weight:700;
+	font-size:13px;
+}
+
+.new_{
+	background:var(--desaturated_cyan);
+	padding:6px;
+	border-radius:15px;
+	font-size:10px;
+	color:white;
+	font-weight:700;
+	margin:0 5px;
+}
+.featured{
+	background:var(--dark_cyan);
+	padding:6px;
+	border-radius:15px;
+	font-size:10px;
+	color:white;
+	font-weight:700;
+	margin:0 5px;
+}
+
+.second_row{
+	font-weight:700;
+	color:var(--dark_cyan);
+	font-size:16px;
+}
+
+.third_row{
+	display:flex;
+	color:var(--cyan);
+	align-items:center;
+	font-size:13px;
+}
+
+
+.postedAt::after, .contract::after{
+	content:"";
+	display:inline-block;
+	height:4px;
+	width:4px;
+	background:var(--cyan);
+	position:relative;
+	bottom:4px;
+	margin:0 8px;
+	border-radius:2px;
+}
+
+
+.languages_container{
+	width:50%;
+	display:flex;
+	justify-content:flex-end;
+}
+
+.lang{
+	padding:7px;
+	background:var(--filter_tablets);
+	margin-right:10px;
+	border-radius:3px;
+	font-size:12px;
+	color:var(--desaturated_cyan);
+	font-weight:700;
+}
+
+.flex_container .lang:hover{
+	cursor:pointer;
+	background-color:var(--desaturated_cyan);
+	color:white;
+}
+
+
+
+
+@media screen and (max-width:1000px){
+	body{
+		width:100vw;
+		min-width:400px;
+	}
+	
+	header{
+		background-image:url("images/bg-header-mobile.svg");
+		background-size:100% 100%;
+		height:140px;	
+		width:100%;
+	}
+	
+	#filter_list{
+		min-width:0px;
+	}
+	
+	#first{
+		width:80%;
+		flex-wrap:wrap;
+	}
+	
+	#first .filter{
+		padding:10px 0px;
+	}
+	
+	.flex_container{
+		max-height:1000px;
+		min-height:0px;
+		min-width:0px;
+		width:320px;
+		height:220px;
+		margin-bottom:50px;
+	}
+	
+	.border_left_2{
+		margin-right:10px;
+	}
+	
+	.surround{
+		flex-direction:column;
+		align-items:flex-start;
+	}
+	
+	.logo{
+		width:50px;
+		height:50px;
+		float:left;
+		position:relative;
+		bottom:25px;
+	}
+	
+	.main_container{
+		margin:0px;
+		width:100%;
+		position:relative;
+		bottom:20px;
+		margin-right:0px;
+		height:44%;
+	}
+	
+	.main_container::after{
+		content:"";
+		width:100%;
+		display:block;
+		height:1px;
+		background-color:rgba(100,100,150,0.4);
+		margin-top:15px;
+	}
+	
+	.first_row{
+		width:100%;
+		margin:0;
+	}
+	
+	.second_row{
+		width:100%;
+	}
+	
+	.third_row{
+		width:100%;
+	}
+	
+	.third_row span{
+		font-size:13px;
+	}
+	
+	.languages_container{
+		width:100%;
+		flex-wrap:wrap;
+		justify-content:flex-start;
+		position:relative;
+		bottom:10px;
+	}
+	
+	.lang{
+		margin-top:5px;
+	}
+}
+
+
+/*
+.border_left_2{
+	background-color:white;
+	height:100%;
+	width:1vw;
+	position:relative;
+	left:-0.5vw;
+	margin-right:2%;
+}
+*/
+
+
+
+
+.attribution { font-size: 11px; text-align: center; display:none;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Desaturated Dark Cyan: hsl(180, 29%, 50%)
+
+### Neutral
+
+- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+- Dark Grayish Cyan: hsl(180, 8%, 52%)
+- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Headings
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 500, 700
+
+*/
